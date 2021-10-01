@@ -1,0 +1,5 @@
+<p>movies works!</p>
+<p>{{movies | json}}</p>
+<ng-container *ngFor="let movie of movies">
+    <app-list-card [movieCard]="movie"></app-list-card>
+</ng-container>

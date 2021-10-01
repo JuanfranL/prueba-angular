@@ -6,7 +6,7 @@ import { Actor, Company, Movie } from 'src/app/core/models/movies';
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService {
+export class DataService {
   private temporalBaseUrl: String = 'http://localhost:3000';
   constructor(
     private httpClient: HttpClient
