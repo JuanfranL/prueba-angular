@@ -17,6 +17,10 @@ export class AppComponent {
   }
   public menuNav: any = [
     {
+      text: 'main',
+      route: ''
+    },
+    {
       text: 'movies',
       route: 'movies'
     }
