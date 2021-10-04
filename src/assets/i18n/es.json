@@ -1,0 +1,13 @@
+{
+    "common": {
+        "error-confirmation": "Ok"
+    },
+    "main": {
+        "title": "Página principal",
+        "subtitle": "Esta es la página principal",
+        "set-error": "Poner error",
+        "set-global-spinner": "Poner spiner global",
+        "set-state-value": "Poner valor de estado",
+        "current-state-value": "Valor del estado actual"
+    }
+}
