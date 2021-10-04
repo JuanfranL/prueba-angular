@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Movie } from 'src/app/core/models/movies';
+import { ErrorDialogService } from 'src/app/core/services/error-dialog.service';
 import { StateService } from 'src/app/core/services/state.service';
 import { ListDataCard } from 'src/app/shared/components/list-card/list-card.component';
 import { DataService } from 'src/app/shared/services/data.service';
@@ -19,7 +20,8 @@ export class MoviesListComponent implements OnInit, OnDestroy {
   constructor(
     private dataService: DataService,
     private moviesService: MoviesService,
-    private stateService: StateService
+    private stateService: StateService,
+    private errorDialogService: ErrorDialogService
   ) { 
   }
 
@@ -31,7 +33,11 @@ export class MoviesListComponent implements OnInit, OnDestroy {
     ));
     this.subscriptions.push(this.stateService.get('stateMain').subscribe(
       (value) => {
-        this.stateValue = value;
+        if (value) {
+          this.stateValue = value;
+        } else {
+          this.errorDialogService.showError('Ha ocurrido un error al recuperar las peliculas');
+        }
       }
     ));
   }

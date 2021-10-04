@@ -12,6 +12,7 @@
 <div class="content" role="main" *transloco="let t; read 'main'">
   <h2>{{ t('title') }}</h2>
   <p>{{ t('subtitle') }}</p>
+  <button (click)="setError()" mat-button color=primary>{{ t('set-error') }}</button>
   <button (click)="setGlobalSpinner()" mat-button color=primary>{{ t('set-global-spinner') }}</button>
   <button (click)="setValue()" mat-button color=primary>{{ t('set-state-value' )}}</button>
   {{ t('current-state-value')}}: {{stateValue }}

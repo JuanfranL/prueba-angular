@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TranslocoModule} from '@ngneat/transloco'
 
 
 
@@ -11,7 +13,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   ],
   imports: [
     CommonModule,
-    MatProgressSpinnerModule
+    TranslocoModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   exports: [
     SpinnerComponent
