@@ -1,0 +1,5 @@
+<button (click)="setValue()" mat-button color=primary>set state value</button>
+  Current value: {{stateValue}}
+<ng-container *ngFor="let movie of movies">
+    <app-list-card *ngIf="movie" [card]="movie"></app-list-card>
+</ng-container>
