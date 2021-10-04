@@ -9,6 +9,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SharedModule } from './shared/shared.module';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    SharedModule
+    SharedModule,
+    CoreModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   exports: [
     MatSidenavModule,

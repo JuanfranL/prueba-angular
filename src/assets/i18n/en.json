@@ -1,0 +1,9 @@
+{
+    "main": {
+        "title": "Main page",
+        "subtitle": "This is the main page",
+        "set-global-spinner": "Set global spinner",
+        "set-state-value": "Set state value",
+        "current-state-value": "Current state value"
+    }
+}

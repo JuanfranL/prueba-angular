@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
+import { StateService } from './state.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,16 +9,17 @@ import { Overlay, OverlayRef } from '@angular/cdk/overlay';
  * This service shows a spinner that blocks 
  */
 export class SpinnerService {
-  // private overlayRef: OverlayRef = null;
 
   constructor(
-    private overlay: Overlay
+    private stateService: StateService
   ) { }
 
-  public show () {
-    // if (this.overlayRef) {
-    //   this.overlayRef = this.overlay.create();
-    // }
+  public openGlobalSpinner () {
+    this.stateService.set('GlobalSpinner', true);
+  }
+
+  public closeGlobalSpinner () {
+    this.stateService.set('GlobalSpinner', false);
   }
 
 }

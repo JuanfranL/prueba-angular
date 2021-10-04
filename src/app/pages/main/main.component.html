@@ -9,10 +9,11 @@
   }
 </style>
 
-<div class="content" role="main">
-  <!-- Resources -->
-  <h2>Main Page</h2>
-  <p>This is the main page</p>
-  <button (click)="setValue()" mat-button color=primary>set state value</button>
-  Current value: {{stateValue}}
+<div class="content" role="main" *transloco="let t; read 'main'">
+  <h2>{{ t('title') }}</h2>
+  <p>{{ t('subtitle') }}</p>
+  <button (click)="setGlobalSpinner()" mat-button color=primary>{{ t('set-global-spinner') }}</button>
+  <button (click)="setValue()" mat-button color=primary>{{ t('set-state-value' )}}</button>
+  {{ t('current-state-value')}}: {{stateValue }}
+  <app-spinner></app-spinner>
 </div>
