@@ -22,7 +22,7 @@ export class ListCardComponent implements OnInit {
   /**
    * input data of the list data card
    */
-  @Input() card: ListDataCard|null = null;
+  @Input() card?: ListDataCard = undefined;
   constructor() { }
 
   ngOnInit(): void {
